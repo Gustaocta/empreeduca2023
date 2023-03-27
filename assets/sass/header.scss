@@ -4,55 +4,40 @@
 // Media Queries - É uma técnica que permite que você aplique estilos CSS diferentes para diferentes tamanhos de tela.
 //Mobile First
 .hide-on-desktop {
+    width: auto;
+    height: 130px;
+    background-color: black;
     display: flex;
 }
+
+.icons-image {
+    color: #fff;
+    text-decoration: none;
+    justify-content: space-around;
+}
+                
 
 .hide-on-mobile {
     display: none;
 }
+
+body {
+    font-family: roboto;
+    font-weight: 300;
+}
+
+
+
 .show-on-large-screen {
     display: none;
 }
 
-.header-top-site > nav {
-    font-family: oswald;
-    font-size: 1.5em;
-    align-items: center;
-    height: 130px;
-    background-color: #10111F;
-    color: #fff;
-    & .block-logo {
-        display: flex;
-        flex-basis: 40%;
-        align-items: center;
-        border: solid 1px white;
-        justify-content: space-around;
-        & #logotipo {
-            width: 200px;
-            height: 200px;
-            border: solid 1px red;
-        }
-    }
-    & ul {
-        margin:0;
-        padding: 0;
-        & > li  {
-            display: inline-flex;
-            list-style: none;
-            min-width: 80px;
-            text-align: center;
-        }
-    }
-    &  a {
-        color: #fff;
-        text-decoration: none;
-    }
-}
 
 //tablet
 @media (min-width: 768px){
 
 }
+
 //desktop
 @media (min-width: 992px){
     .hide-on-desktop {
@@ -64,8 +49,59 @@
         border: solid 1px yellow;
         justify-content: space-between;
     }
+
+    .header-top-site > nav {
+        font-family: oswald;
+        height: 1.5em;
+        align-items: center;
+        height: 130px;
+        background-color: #10111f;
+        color: #ffff;
+        & .block-logo {
+            display: flex;
+            flex-basis: 40%;
+            align-items: center;
+            border: solid 1px white;
+            justify-content: space-around;
+            & #logotipo {
+                width: 200px;
+                height: 200px;
+                border:  solid 1px red;
+            }
+        }
+        & ul {
+            margin: 0;
+            padding: 0;
+            & > li { 
+                display: inline-flex;
+                list-style: none;
+                min-width: 80px;
+                text-align: center;
+            }
+        }
+        & a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    #logotipo > img {
+        position: absolute;
+        top: -10px;
+        left: 610px;
+        width: 160px;
+        height: 180px;
+    }
 }
+
 //large screen
 @media (min-width: 2220px) {
+    .hide-on-desktop {
+        display: none;
+    }
 
+    .hide-on-mobile {
+        display: flex;
+    }
 }
+
